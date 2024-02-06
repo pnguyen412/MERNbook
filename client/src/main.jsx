@@ -8,9 +8,8 @@ import {
   createHttpLink,
 } from "@apollo/client"
 import { setContext } from "@apollo/client/link/context";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import App from './App.jsx'
-import Navbar from "components/Navbar";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 import SearchBooks from './pages/SearchBooks'
 import SavedBooks from './pages/SavedBooks'
 
@@ -40,11 +39,11 @@ function App() {
       <Router>
         <>
           <Navbar />
-          <Switch>
+          {/* <Switch> */}
             <Route exact path="/" component={SearchBooks} />
             <Route exact path="/saved" component={SavedBooks} />
             <Route render={() => <h1 className="display-2">Wrong page!</h1>} />
-          </Switch>
+          {/* </Switch> */}
         </>
       </Router>
     </ApolloProvider>
@@ -70,6 +69,6 @@ export default App;
 //   }
 // ])
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
-)
+// ReactDOM.createRoot(document.getElementById('root')).render(
+//   <RouterProvider router={router} />
+// )
