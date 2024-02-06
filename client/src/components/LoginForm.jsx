@@ -28,20 +28,27 @@ const LoginForm = () => {
     }
 
     try {
-      const { data } = await loginUser({ variables: { ...userFormData } });
-      Auth.login(data.login.token);
+      const response = await loginUser({
+        variables: { ...userFormData }
+      });
+      // Extract token and user data from mutation response
+      const { token, user } = response.data.login;
+      console.log(user);
+      // Log in the user with Auth utility
+      Auth.login(token);
     } catch (err) {
       console.error(err);
+      // Set showAlert to true if an error occurs during login
       setShowAlert(true);
     }
 
-
+    // Clear form data after submission
     setUserFormData({
-      username: '',
       email: '',
       password: '',
     });
   };
+
 
   return (
     <>
