@@ -11,6 +11,9 @@
 - Install node modules through the command 'npm install' in git bash
 - Use command 'npm run develop' to run the application
 
+- Link to live application: https://mernbook-d8dh.onrender.com
+- Link to my repo: https://github.com/pnguyen412/MERNbook 
+
 ## Credits:
 - https://github.com/arkenwald
 - https://github.com/bahossdev
