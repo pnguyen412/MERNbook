@@ -1,8 +1,8 @@
 # MERN Book Search Engine
 
 ## Description
-- The main objective of this challenge was to  take starter code with a fully functioning Google Books API search engine built with a RESTful API, and refactor it to be a GraphQL API built with Apollo Server.
-- In addition to the above, we using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API.
+- The main objective of this challenge was to take starter code with a fully functioning Google Books API search engine built with a RESTful API, and refactor it to be a GraphQL API built with Apollo Server.
+- In addition to the above, we used the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API.
 - I learned how to set up an Apollo Server to use GraphQL queries and mutations to fetch and modify data, replacing the existing RESTful API.
 - I also learned how to modify the existing authentication middleware so that it works in the context of a GraphQL API.
 
@@ -10,9 +10,6 @@
 - Clone the repository on github locally.
 - Install node modules through the command 'npm install' in git bash
 - Use command 'npm run develop' to run the application
-
-## Walkthrough Video:
-- https://watch.screencastify.com/v/keeCJaQkTWMleMK6RdwM
 
 ## Credits:
 - https://github.com/arkenwald
