@@ -14,6 +14,18 @@
 - Link to live application: https://mernbook-d8dh.onrender.com
 - Link to my repo: https://github.com/pnguyen412/MERNbook 
 
+Landing Page
+![screenshot1](images/Screenshot1.png)
+Sign Up Modal
+![screenshot1](images/Screenshot2.png)
+Landing Page post-login
+![screenshot1](images/Screenshot3.png)
+Post-Search Page
+![screenshot1](images/Screenshot4.png)
+Saved Books
+![screenshot1](images/Screenshot5.png)
+
+
 ## Credits:
 - https://github.com/arkenwald
 - https://github.com/bahossdev
