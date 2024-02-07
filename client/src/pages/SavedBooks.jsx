@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import {
   Container,
   Card,
@@ -6,22 +6,36 @@ import {
   Row,
   Col
 } from 'react-bootstrap';
-import { useQuery, useMutation } from "@apollo/client";
-import { GET_ME } from "../utils/queries";
 
-import { REMOVE_BOOK } from "../utils/mutations";
+import { useMutation, useQuery } from '@apollo/client';
+import { REMOVE_BOOK } from '../utils/mutations';
+import { QUERY_ME } from '../utils/queries';
+import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
 const SavedBooks = () => {
-  const { loading, data } =  useQuery(GET_ME)
-  const [removeBook] = useMutation(REMOVE_BOOK)
-  const userData = data?.me || []
+  // const [userData, setUserData] = useState({});
+  const [removeBook, { error }] = useMutation(REMOVE_BOOK);
+  const { data, loading, refetch } = useQuery(QUERY_ME);
+  let userData = data?.me || {};
+  console.log(userData);
 
-  // create function that accepts the book's mongo _id value as param and deletes the book from the database
+
+  // function that accepts the book's mongo _id value as param and deletes the book from the database
   const handleDeleteBook = async (bookId) => {
+    const token = Auth.loggedIn() ? Auth.getToken() : null;
+
+    if (!token) {
+      return false;
+    }
+
     try {
-      await removeBook({ variables: { bookId } });
+      await removeBook({
+        variables: { bookId: bookId }
+      })
       // upon success, remove book's id from localStorage
+      const { data } = await refetch();
+      userData = data.me;
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
@@ -35,7 +49,7 @@ const SavedBooks = () => {
 
   return (
     <>
-      <div fluid className="text-light bg-dark p-5">
+      <div fluid='true' className="text-light bg-dark p-5">
         <Container>
           <h1>Viewing saved books!</h1>
         </Container>
