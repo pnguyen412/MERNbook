@@ -9,17 +9,15 @@
 ## Installation & Usage:
 - Clone the repository on github locally.
 - Install node modules through the command 'npm install' in git bash
-- Use command 'npm run develop'
-- 
+- Use command 'npm run develop' to run the application
 
 ## Walkthrough Video:
 - https://watch.screencastify.com/v/keeCJaQkTWMleMK6RdwM
 
 ## Credits:
 - https://github.com/arkenwald
-- https://medium.com/@kukreti.ashutosh/episode-2-mysql-database-setup-and-seeding-77873ce06e96
-- https://stackoverflow.com/questions/68490589/node30437-unhandledpromiserejectionwarning-error-callback-function-is-not-a
-- https://snyk.io/advisor/npm-package/inquirer/functions/inquirer.prompt
+- https://github.com/bahossdev
+
 ## License:
 MIT License
 
