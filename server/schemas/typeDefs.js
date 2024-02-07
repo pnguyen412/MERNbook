@@ -10,7 +10,7 @@ const typeDefs = gql`
     link: String
   }
   type User {
-    id: ID
+    _id: ID
     username: String
     email: String
     bookCount: Int
